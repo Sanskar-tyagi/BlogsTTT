@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Tabs from './Tabs'
 import BlogCard from './BlogCard'
+import toast, { Toaster } from 'react-hot-toast';
 
 function BlogSection() {
-    const data = [
+  useEffect(()=>{
+    toast('You can utilize the like button in Blogs!', {
+      icon: '👏',
+    }); 
+   },[])
+  const data = [
         {
           title: 'A Changing World Order',
           desc: 'The world is changing at a feverish pace. Friends, colleagues and everyone engaged in knowledge work are beginning to sense this, including...',
@@ -49,8 +55,16 @@ function BlogSection() {
     <div className='px-6  '>
         <Tabs/>
         {data.map((item)=>{
-          return  <BlogCard data={item}/> 
+          return  <BlogCard key={item.date} data={item}/> 
         })}
+          <Toaster  toastOptions={{ 
+            style: {
+              border: "1px solid #713200",
+              padding: "16px",
+              color: "#713200",
+              fontSize:'15px'
+            },
+          }}/>
     </div>
   )
 }

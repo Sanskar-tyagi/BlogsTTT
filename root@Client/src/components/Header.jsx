@@ -4,10 +4,11 @@ import { MdOutlineDiamond } from "react-icons/md";
 import { HiBadgeCheck } from "react-icons/hi";
 import { CiStar ,CiHeart} from "react-icons/ci";
 import { FaRegThumbsUp ,FaRegEye } from "react-icons/fa6";
+import SidePost from './SidePost';
 function Header() {
   return (
     <div className='flex flex-col w-full '>  
-    <div className='w-full h-[40vh] bg-cover bg-no-repeat bg-center'  style={{background:'url(https://i0.wp.com/www.benday.com/wp-content/uploads/2015/03/paris-bridge-horizontal.jpg?w=1200&ssl=1)',backgroundRepeat:'no-repeat' ,backgroundSize:'cover',backgroundPosition:'center'}}  />
+    <div className='w-full h-[60vh] bg-cover bg-no-repeat bg-center'  style={{background:'url(https://i0.wp.com/www.benday.com/wp-content/uploads/2015/03/paris-bridge-horizontal.jpg?w=1200&ssl=1)',backgroundRepeat:'no-repeat' ,backgroundSize:'cover',backgroundPosition:'center'}}  />
    <div className="flex px-4 md:px-32 ">
     <Avatar src={"https://pbs.twimg.com/profile_images/1148507476578275328/fsrvymGR_400x400.jpg"}/>
      <div className="flex  flex-col my-2 gap-4  justify-center items-center ">
@@ -25,8 +26,7 @@ function Header() {
         </div>
         <div className="flex flex-col justify-center items-center gap-2">
         <button type="button" className="md:px-5 py-0 px-3 md:text-lg text-md font-medium border-2 rounded-md border-gray-400  text-gray-600">245</button> 
-        <span className='text-center text-sm font-medium text-gray-600  md:text-md'>Following</span>
- 
+        <span className='text-center text-sm font-medium text-gray-600  md:text-md'>Following</span> 
  </div>
        </div>
      </div>
@@ -62,6 +62,10 @@ function Header() {
   </div>
   </div>
   
+   </div>
+   <div className="md:block mt-5 hidden">
+  
+   <SidePost/>
    </div>
     </div>
   )
